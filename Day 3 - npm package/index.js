@@ -1,5 +1,4 @@
 const binarySearch = (nums, target) => {
-  nums.sort();
   let s = 0,
     e = nums.length - 1;
 
