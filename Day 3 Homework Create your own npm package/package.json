@@ -1,0 +1,14 @@
+{
+  "name": "ugam_practice_calculator",
+  "version": "1.0.0",
+  "description": "simple practice calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "ugam",
+  "license": "ISC"
+}
