@@ -1,6 +1,6 @@
 # Simple Calculator
 
-This npm package provides a simple calculator module for basic arithmetic operations such as addition, division, and multiplication.</br>
+This npm package provides a simple calculator module for basic arithmetic operations such as addition, substraction, division, and multiplication.</br>
 
 ![npmjs](https://github.com/UgamRaj/Nodejs/assets/124122714/5e9bf6c7-e996-4fc6-93fc-5bde49db5fc5)
 
