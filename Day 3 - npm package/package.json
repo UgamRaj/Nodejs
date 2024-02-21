@@ -1,0 +1,14 @@
+{
+  "name": "ugam_binary_search",
+  "version": "1.0.0",
+  "description": "Simple binary search on array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "ugam",
+  "license": "ISC"
+}
