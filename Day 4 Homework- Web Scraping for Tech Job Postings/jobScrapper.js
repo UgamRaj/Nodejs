@@ -18,11 +18,18 @@ const products = [];
 
     const productCards = $(".card-content").each((index, data) => {
       const container = $(data);
-      const TITLE = container.find(".title.is-5").text();
+      const jobTitle = container.find(".title.is-5").text();
 
-      const COMPANY = container.find(".subtitle.is-6.company").text();
-      const LOCATION = container.find(".content .location").text();
-      products.push({ TITLE, COMPANY, LOCATION });
+      const companyName = container.find(".subtitle.is-6.company").text();
+      const location = container.find(".content .location").text();
+      const postedDate = container.find("[datetime]").text();
+
+      products.push({
+        "Job Title": jobTitle,
+        "Company Name": companyName,
+        Location: location,
+        "Posted Date": postedDate,
+      });
     });
 
     const workbook = xlsx.utils.book_new();
