@@ -3,7 +3,7 @@ import axios from "axios";
 import { load } from "cheerio";
 import xlsx from "xlsx";
 
-const products = [];
+const allJobs = [];
 
 (async () => {
   const url = "https://realpython.github.io/fake-jobs/";
@@ -24,7 +24,7 @@ const products = [];
       const location = container.find(".content .location").text();
       const postedDate = container.find("[datetime]").text();
 
-      products.push({
+      allJobs.push({
         "Job Title": jobTitle,
         "Company Name": companyName,
         Location: location,
@@ -34,7 +34,7 @@ const products = [];
 
     const workbook = xlsx.utils.book_new();
 
-    const workSheet = xlsx.utils.json_to_sheet(products);
+    const workSheet = xlsx.utils.json_to_sheet(allJobs);
     xlsx.utils.book_append_sheet(workbook, workSheet, "Sheet1");
     xlsx.writeFile(workbook, "jobData.xlsx");
   } catch (err) {
