@@ -16,7 +16,7 @@ const allJobs = [];
 
     const $ = load(response.data);
 
-    const productCards = $(".card-content").each((index, data) => {
+    const jobCards = $(".card-content").each((index, data) => {
       const container = $(data);
       const jobTitle = container.find(".title.is-5").text();
 
