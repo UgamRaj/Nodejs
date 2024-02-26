@@ -1,0 +1,25 @@
+{
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "nanoid": "^5.0.6",
+    "nodemon": "^3.1.0"
+  },
+  "name": "url_shortner",
+  "version": "1.0.0",
+  "description": "Reduce long url into short url",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "js"
+  ],
+  "author": "ugam",
+  "license": "ISC"
+}
