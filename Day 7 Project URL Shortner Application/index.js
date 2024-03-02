@@ -57,7 +57,7 @@ app.post("/url-shortner", (req, res) => {
 
   res.json({
     succes: true,
-    url: `http://url-shortner/${shortUrl}`,
+    url: `https://nodejs-mfgt.onrender.com/${shortUrl}`,
   });
 });
 
