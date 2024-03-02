@@ -1,3 +1,3 @@
 # Hosted Link
 
-## [[URL shortner LInk]()](https://nodejs-mfgt.onrender.com)
+## [URL shortner LInk](https://nodejs-mfgt.onrender.com)
