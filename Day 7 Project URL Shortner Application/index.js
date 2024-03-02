@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import bodyParser from "body-parser";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 10000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -57,7 +57,7 @@ app.post("/url-shortner", (req, res) => {
 
   res.json({
     succes: true,
-    url: `http://localhost:3000/${shortUrl}`,
+    url: `http://url-shortner/${shortUrl}`,
   });
 });
 
@@ -72,5 +72,5 @@ app.get("/:shortUrl", (req, res) => {
 
 //todo---> Server Start:
 app.listen(PORT, () =>
-  console.log(`Spp is running on http://localhost:${PORT}`)
+  console.log(`App is running on http://localhost:${PORT}`)
 );
