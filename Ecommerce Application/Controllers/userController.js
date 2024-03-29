@@ -3,7 +3,7 @@ import UserModel from "../Models/userModel.js";
 import asyncHandler from "express-async-handler";
 import validateMongoDbId from "../utils/validateMongodbId.js";
 import generateRefershToken from "../Config/refreshToken.js";
-import jwt, { decode } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 // import bcrypt from "bcrypt";
 
 const userRegistration = asyncHandler(async (req, res) => {
@@ -235,9 +235,30 @@ const unBlockedUser = asyncHandler(async (req, res) => {
   }
 });
 
+//! Reset password
+
+const resetPassword = asyncHandler(async (req, res) => {
+  const { _id } = req.user;
+  validateMongoDbId(_id);
+  const user = await UserModel.findById(_id);
+  // console.log("🚀 ~ resetPassword ~ user:", user);
+  const { password } = req.body;
+  if (password) {
+    user.password = password;
+    const updatedPassword = await user.save();
+    res.json({
+      success: true,
+      updatedPassword,
+    });
+  } else {
+    res.json(user);
+  }
+});
+
 export {
   userRegistration,
   userLogin,
+  resetPassword,
   getAllUsers,
   getSingleUser,
   deleteSingleUser,

@@ -6,6 +6,7 @@ import {
   getSingleUser,
   handleRefreshToken,
   logout,
+  resetPassword,
   unBlockedUser,
   updateUser,
   userLogin,
@@ -17,6 +18,7 @@ const router = express.Router();
 
 router.post("/register", userRegistration);
 router.post("/login", userLogin);
+router.patch("/resetpassword", authMiddleware, resetPassword);
 router.get("/allusers", getAllUsers);
 // router.get("/refresh", authMiddleware, isAdmin, handleRefreshToken);
 router.get("/refresh", handleRefreshToken);

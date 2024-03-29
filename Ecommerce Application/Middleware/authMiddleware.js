@@ -11,6 +11,7 @@ const authMiddleware = asyncHandler(async (req, res, next) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
         // console.log("🚀 ~ authMiddleware ~ decoded:", decoded);
         const user = await UserModel.findById({ _id: decoded?.id });
+        // console.log("🚀 ~ authMiddleware ~ user:", user);
         req.user = user;
         next();
       }
@@ -23,7 +24,7 @@ const authMiddleware = asyncHandler(async (req, res, next) => {
 });
 
 const isAdmin = asyncHandler(async (req, res, next) => {
-  //   console.log("isAdmin", req.user);
+  console.log("isAdmin", req.user);
   const { email } = req.user;
   const admin = await UserModel.findOne({ email });
   // console.log("🚀 ~ isAdmin ~ admin:", admin);
