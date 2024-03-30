@@ -255,10 +255,15 @@ const resetPassword = asyncHandler(async (req, res) => {
   }
 });
 
+//! Forgot Password
+
+const forgotPasswordToken = asyncHandler(async (req, res) => {});
+
 export {
   userRegistration,
   userLogin,
   resetPassword,
+  forgotPasswordToken,
   getAllUsers,
   getSingleUser,
   deleteSingleUser,

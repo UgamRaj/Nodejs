@@ -2,6 +2,7 @@ import express from "express";
 import {
   blockedUser,
   deleteSingleUser,
+  forgotPasswordToken,
   getAllUsers,
   getSingleUser,
   handleRefreshToken,
@@ -18,6 +19,7 @@ const router = express.Router();
 
 router.post("/register", userRegistration);
 router.post("/login", userLogin);
+router.post("/forgetpassword", forgotPasswordToken);
 router.patch("/resetpassword", authMiddleware, resetPassword);
 router.get("/allusers", getAllUsers);
 // router.get("/refresh", authMiddleware, isAdmin, handleRefreshToken);
