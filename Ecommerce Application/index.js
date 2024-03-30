@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose";
 // import DbConnect from "./Config/DBConnect.js";
 import userAuthRoute from "./Routes/userRoute.js";
 import { errorHandler, notFound } from "./Middleware/errorHandler.js";
 import cookieParser from "cookie-parser";
 import productRoute from "./Routes/productRoute.js";
 import morgan from "morgan";
-import mongoose from "mongoose";
 
 const app = express();
 dotenv.config();
