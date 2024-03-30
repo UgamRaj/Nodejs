@@ -12,13 +12,14 @@ dotenv.config();
 
 const PORT = process.env.PORT || 10000;
 const DATABASE_URL = process.env.DATABASE_URL;
+const DB_NAME = process.env.DB_NAME;
 
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
 
 //! Database connection
-DbConnect(DATABASE_URL);
+DbConnect(DATABASE_URL, DB_NAME);
 
 app.use("/api/user", userAuthRoute);
 app.use("/api/product", productRoute);
